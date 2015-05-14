@@ -1,0 +1,92 @@
+<html>
+  <head>
+        <title>Array random without duplicates - Tree Search</title>
+    </head>
+ 
+    <body>
+        <h2>Array random without duplicates - Tree Search</h2>
+        <div id="display_tree">
+            <table width="600px">
+                <tr><td><table width="100%"><tr><td align="center" id="1"></td></tr></table></td></tr>
+                <tr><td><table width="100%"><tr><td align="center" id="2"></td><td align="center" id="3"></td></tr></table></td></tr>
+                <tr><td><table width="100%"><tr><td align="center" id="4"></td><td align="center" id="5"></td><td align="center" id="6"></td><td align="center" id="7"></td></tr></table></td></tr>
+                <tr><td><table width="100%"><tr><td align="center" id="8"></td><td align="center" id="9"></td><td align="center" id="10"></td><td align="center" id="11"></td><td align="center" id="12"></td><td align="center" id="13"></td><td align="center" id="14"></td><td align="center" id="15"></td></tr></table></td></tr>
+                <tr><td><table width="100%"><tr><td align="center" id="16"></td><td align="center" id="17"></td><td align="center" id="18"></td><td align="center" id="19"></td><td align="center" id="20"></td><td align="center" id="21"></td><td align="center" id="22"></td><td align="center" id="23"></td><td align="center" id="24"></td><td align="center" id="25"></td><td align="center" id="26"></td><td align="center" id="27"></td><td align="center" id="28"></td><td align="center" id="29"></td><td align="center" id="30"></td><td align="center" id="31"></td></tr></table></td></tr>
+                <!--
+                <tr><td><table width="100%"></table></td></tr>
+                <tr><td><table width="100%"></table></td></tr>
+                <tr><td><table width="100%"></table></td></tr>
+                -->
+            </table>
+        </div>
+ 
+        <script type="text/javascript">
+            //Criar a estrutura unica da arvore
+            'use strict'
+
+            //STRUCT
+            var Struct = function(val){
+                var self = this;
+                this.val = val;
+            }
+            Struct.prototype = {
+                left: Struct,
+                right: Struct
+            }
+
+            //LITERAL OBJECTS
+            var pageElementIds = {
+                display_tree: document.getElementById('display_tree'),
+                table_counter:1
+            }
+
+            //FUNCTIONS
+            function printer(struct){
+                if(typeof struct.val != "undefined"){
+                    document.getElementById(pageElementIds.table_counter++).innerHTML = struct.val;
+                    
+                    printer(struct.left);
+                    printer(struct.right);
+                }
+                
+            }
+
+            function insert(val,struct){
+                if(typeof struct.val != "undefined"){
+                    if(val>struct.val){
+                        if(typeof struct.right.val != "undefined"){
+                            insert(val,struct.right);
+                        }else{
+                            struct.right = new Struct(val);
+                        }
+                    }else{
+                        if(typeof struct.left.val != "undefined"){
+                            insert(val,struct.left);
+                        }else{
+                            struct.left = new Struct(val);
+                        }
+                    }
+                }
+            }
+ 
+            var root = new Struct(3);
+            insert(2,root);
+            insert(8,root);
+            insert(5,root);
+            insert(9,root);
+            insert(15,root);
+            insert(18,root);
+            insert(24,root);
+            insert(12,root);
+            insert(23,root);
+            insert(28,root);
+            insert(80,root);
+            insert(34,root);
+            insert(22,root);
+
+            //console.log(root);
+            printer(root);
+
+        </script>
+    </body>
+</html>
