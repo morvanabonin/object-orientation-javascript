@@ -17,7 +17,7 @@ function insertionSort(cards) {
 
 
 function insertionSort2(cards) {
-    var len = cards.length
+    var len = cards.length;
     for (index = 1; index < len; index++) {
         currentvalue = cards[index];
         position = index;
