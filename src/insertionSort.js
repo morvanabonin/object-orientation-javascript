@@ -5,7 +5,7 @@ function insertionSort(cards) {
     for(i = 2; i < len; i++) {
         key = cards[i];
         j = i - 1;
-        while (j > 0 && cards[j] > key) {
+        while (j >= 0 && cards[j] > key) {
             cards[j + 1] = cards[j];
             j = j - 1;
         }
