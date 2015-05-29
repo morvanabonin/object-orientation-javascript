@@ -1,6 +1,6 @@
 function insertionSort(cards) {
     var len = cards.length;
-    var i, j, key; 
+    var i, j, key;
 
     for(i = 2; i < len; i++) {
         key = cards[i];
