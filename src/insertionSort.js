@@ -2,7 +2,7 @@ function insertionSort(cards) {
     var len = cards.length;
     var i, j, key;
 
-    for(i = 2; i < len; i++) {
+    for(i = 1; i < len; i++) {
         key = cards[i];
         j = i - 1;
         while (j >= 0 && cards[j] > key) {
