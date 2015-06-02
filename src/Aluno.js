@@ -16,19 +16,19 @@ function Aluno () {
     }
 
     this.getNome = function () {
-        return this.nome;
+        return nome;
     }
 
     this.getIdade = function () {
-        return this.idade;
+        return idade;
     }
 
     this.getCurso = function () {
-        return this.curso;
+        return curso;
     }
 
     this.mostraDados = function () {
-        console.log("Nome do aluno: "+ this.nome + "\n Idade: " + this.idade + "\n Curso: " + this.curso);
+        console.log("Nome do aluno: "+ this.nome + "\nIdade: " + this.idade + "\nCurso: " + this.curso);
     }
 }
 
