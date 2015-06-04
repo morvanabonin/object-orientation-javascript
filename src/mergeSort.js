@@ -7,6 +7,14 @@ function Merge(mergeArray, firstIdx, middleIdx, lastIdx) {
 	L = Left(mergeArray, nOne);
 	R = Right(mergeArray, nTwo, lastIdx);
 
+	for (i = firstIdx; i <= lastIdx; i++) {
+		console.log(i);
+		if(L[i] <= R[j]) {
+
+		}
+
+	}
+
 }
 
 function Left(mergeArray, nOne) {
