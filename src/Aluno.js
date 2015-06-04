@@ -33,7 +33,7 @@ function Aluno () {
 }
 
 var aluno = new Aluno();
-aluno.setNome("Marcos");
+aluno.setNome("Sarah");
 aluno.setIdade("25");
-aluno.setCurso("Medicina");
+aluno.setCurso("Administração");
 aluno.mostraDados();
