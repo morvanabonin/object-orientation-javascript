@@ -1,11 +1,11 @@
 function quickSort(vetor, iniVet, fimVet) {
 	var i, j, pivo, aux;
 	i = iniVet;
-	j = fimVet; 
+	j = fimVet;
 	///um pivo é feito da soma do 1º e último elemento do vetor e o resultado divido por 2 (existe problema nesta técnica)
 	total = (iniVet + fimVet) / 2;
 	pivo = total;
-	console.log(pivo);
+
 	while(i < j) {
 		while (vetor[i] < pivo) {
 			i = i + 1
@@ -29,7 +29,7 @@ function quickSort(vetor, iniVet, fimVet) {
 	if (i < fimVet) {
 		quickSort(vetor, i, fimVet);
 	}
-
+	console.log(vetor);
 	return vetor;
 }
 
@@ -42,4 +42,3 @@ quickSort(vetor, iniVet, fimVet);
 
 // No QuickSort ele pega um vetor e divide, separando menores para um lado e maiores para o outro, utilizando para isso um pivo.
 // É feita a verificação entre esses "vetores" e mergeado quando
-// Virtualization and comparison sorting algorithims - video
