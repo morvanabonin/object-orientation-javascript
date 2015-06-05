@@ -14,13 +14,11 @@ console.log(fibonacci.fibo(8));
 */
 
 function fibonacci(n) {
-
     return (n < 2) ? n : fibonacci(n - 1) + fibonacci(n - 2);
-
 }
+
 let n;
 console.log(fibonacci(8));
-
 console.log(fibonacci(8));
 
 function fibonacci(n) {
@@ -34,7 +32,6 @@ function fibonacci(n) {
     }
 
     return current;
-
 }
 
 console.log(fibonacci(8));
