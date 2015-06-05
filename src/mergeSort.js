@@ -1,5 +1,7 @@
 function Merge(mergeArray, firstIdx, middleIdx, lastIdx) {
 	var nOne, nTwo, L, R;
+	var i = 0;
+	var j = 0;
 
 	nOne = middleIdx - 1;
 	nTwo = (lastIdx - middleIdx) + 1;
@@ -7,14 +9,16 @@ function Merge(mergeArray, firstIdx, middleIdx, lastIdx) {
 	L = Left(mergeArray, nOne);
 	R = Right(mergeArray, nTwo, lastIdx);
 
-	for (i = firstIdx; i <= lastIdx; i++) {
-		console.log(i);
+	for (k = firstIdx; k <= lastIdx; k++) {
 		if(L[i] <= R[j]) {
-
+			mergeArray[k] = L[i];
+			i = i + 1;
+		} else {
+			mergeArray[k] = R[j];
+			j = j + 1;
 		}
-
+		console.log(mergeArray[k]);
 	}
-
 }
 
 function Left(mergeArray, nOne) {
