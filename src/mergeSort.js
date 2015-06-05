@@ -1,7 +1,11 @@
-function Merge(mergeArray, firstIdx, middleIdx, lastIdx) {
+function Merge(mergeArray) {
 	var nOne, nTwo, L, R;
 	var i = 0;
 	var j = 0;
+	var firstIdx, middleIdx, lastIdx;
+	firstIdx = 0;
+	lastIdx = mergeArray.length - 1;
+	middleIdx = Math.ceil(lastIdx / 2);
 
 	nOne = middleIdx - 1;
 	nTwo = (lastIdx - middleIdx) + 1;
@@ -17,7 +21,7 @@ function Merge(mergeArray, firstIdx, middleIdx, lastIdx) {
 			mergeArray[k] = R[j];
 			j = j + 1;
 		}
-		console.log(mergeArray[k]);
+	console.log(mergeArray[k]);
 	}
 }
 
@@ -60,8 +64,4 @@ function sort(arraySort) {
 
 //var mergeArray = [5, 2, 4, 7, 1, 3, 2, 6];
 var mergeArray = [5, 2, 8, 4, 7, 1, 3, 6, 9, 0];
-var firstIdx, middleIdx, lastIdx;
-firstIdx = 0;
-lastIdx = mergeArray.length - 1;
-middleIdx = Math.ceil(lastIdx / 2);
-Merge(mergeArray, firstIdx, middleIdx, lastIdx);
+Merge(mergeArray);
