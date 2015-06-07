@@ -1,11 +1,14 @@
 var MergeSort = function (mergeArray) {
 
-	var firstIdx;
-	var middleIdx;
-	var lastIdx;
-	var nOne;
-	var nTwo;
-
+	var firstIdx,
+    	middleIdx,
+		lastIdx,
+		nOne,
+		nTwo,
+		i = 0,
+		j = 0,
+		L,
+		R;
 }
 
 function Merge(mergeArray) {
